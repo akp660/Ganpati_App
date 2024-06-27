@@ -5,6 +5,7 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
@@ -24,7 +25,9 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.util.Base64;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -173,12 +176,42 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-
-
+        // Add handler to show the advertisement dialog after 10 seconds
+        Handler alertHandler = new Handler();
+        alertHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                showAdvertismentDialog();
+            }
+        }, 5000);
 
     }
 
+    private void showAdvertismentDialog() {
+        // Inflate the dialog layout
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.activity_advertisment, null);
+
+        // Build the dialog
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        dialogBuilder.setView(dialogView);
+        AlertDialog dialog = dialogBuilder.create();
+
+        // Set dialog properties
+        dialog.setCanceledOnTouchOutside(true);
+
+        // Get dialog views and set actions
+        CardView closeButton = dialogView.findViewById(R.id.close_button);
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        // Show the dialog
+        dialog.show();
+    }
 
     public void profile(){
         Intent intent = new Intent(MainActivity.this, Profile.class);
@@ -214,9 +247,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
-
     public void onBackPressed() {
         super.onBackPressed();
         Intent a = new Intent(Intent.ACTION_MAIN);
@@ -224,20 +254,6 @@ public class MainActivity extends AppCompatActivity {
         a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(a);
     }
-
-    /* public void checkOffset(){
-        scrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
-            @Override
-            public void onScrollChanged() {
-                View view = (View) scrollView.getChildAt(scrollView.getChildCount()-1);
-                int diff = (view.getBottom() - (scrollView.getHeight() + scrollView.getScrollY()));
-
-                if (diff==0){
-                    Toast.makeText(MainActivity.this, "bottom", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    } */
 
     public void gotourl(String s){
         Uri uri = Uri.parse(s);
@@ -254,9 +270,6 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "setCurrentUID: " + e.getMessage());
         }
     }
-
-
-
 
     public String UriToString(Uri uri){
         try {
@@ -321,14 +334,10 @@ public class MainActivity extends AppCompatActivity {
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         StorageReference storageReference = firebaseStorage.getReference().child("profileData").child(personalUID).child("profileimage.jpg");
 
-//        Log.d("TAG", "checkAndSetProfileImage: yayyy");
-
         storageReference.getBytes(Long.MAX_VALUE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
             public void onSuccess(byte[] bytes) {
-
                 Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-
                 String x = bitmapToString(bitmap);
                 SharedPreferences sharedPreferences = getSharedPreferences("userData",MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -336,37 +345,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.commit();
             }
         });
-
-//        storageReference.listAll().addOnSuccessListener(new OnSuccessListener<ListResult>() {
-//            @Override
-//            public void onSuccess(ListResult listResult) {
-////                Log.d("TAG", "onSuccess: step");
-////                Toast.makeText(MainActivity.this, "size is: " + listResult.getPrefixes().size(), Toast.LENGTH_SHORT).show();
-//                for (StorageReference item: listResult.getPrefixes()){
-//                    Log.d("TAG", item.getName());
-//                    Log.d("TAG", "token is :" + personalUID);
-//                    if (item.getName().equals(personalUID)){
-//                        Log.d("TAG", "onSuccess: user  found");
-//                        item.child("profileimage.jpg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-//                            @Override
-//                            public void onSuccess(Uri uri) {
-//                                SharedPreferences sharedPreferences = getSharedPreferences("userData",MODE_PRIVATE);
-//                                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                                editor.putString("profilePicture",UriToString(uri));
-//                                editor.commit();
-//                            }
-//                        });
-//                    }
-//
-//                    else{
-//                        Log.d("TAG", "onSuccess: user not found");
-//                    }
-//                }
-//            }
-//        });
-
     }
-
 
     public String bitmapToString(Bitmap bitmap){
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
