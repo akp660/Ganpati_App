@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.GanpatiApp" parent="Base.Theme.GanpatiApp" />
+    <!-- Other styles -->
+    <style name="Theme.MyTransparentDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item> <!-- Optional: Remove title bar -->
+    </style>
 </resources>
