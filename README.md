@@ -4,7 +4,7 @@
 
 1. **Clone the Repository:**
     ```sh
-    git clone https://github.com/your-username/Ganpati.git
+    git clone https://github.com/akp660/Ganpati_App.git
     cd Ganpati
     ```
    
