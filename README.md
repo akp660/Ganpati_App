@@ -36,10 +36,9 @@ This app allows you to order puja items and book temples online for marriage. It
 
 ### Screenshots
 
-<div style="text-align: center;">
-    <img src="https://example.com/screenshot1.png" alt="Screenshot 1" style="width: 600px; height: auto;">
-</div>
-<div style="display: flex; justify-content: center;">
-    <img src="https://example.com/screenshot2.png" alt="Screenshot 2" style="width: 300px; height: auto; margin-right: 10px;">
-    <img src="https://example.com/screenshot3.png" alt="Screenshot 3" style="width: 300px; height: auto;">
+<div style="overflow-x: scroll; white-space: nowrap;">
+    <img src="https://github.com/akp660/Ganpati_App/assets/72183243/53513239-5e22-4b4b-a0e1-6df03a3e7a24" alt="WhatsApp Image 2023-05-22 at 11 42 34 PM" style="display: inline-block; width: 300px; height: auto; margin-right: 10px;">
+    <img src="https://github.com/akp660/Ganpati_App/assets/72183243/49eede8e-47b7-438d-96a7-220829122050" alt="WhatsApp Image 2023-05-22 at 11 42 33 PM (1)" style="display: inline-block; width: 300px; height: auto; margin-right: 10px;">
+    <img src="https://github.com/akp660/Ganpati_App/assets/72183243/e3d03bab-6ce1-4e3b-92d3-adcc3bc9b091" alt="WhatsApp Image 2023-05-22 at 11 42 33 PM" style="display: inline-block; width: 300px; height: auto; margin-right: 10px;">
+    <img src="https://github.com/akp660/Ganpati_App/assets/72183243/b1b77009-7d8c-42b3-a66e-21b30c5852ef" alt="WhatsApp Image 2023-05-22 at 11 42 32 PM (2)" style="display: inline-block; width: 300px; height: auto; margin-right: 10px;">
 </div>
