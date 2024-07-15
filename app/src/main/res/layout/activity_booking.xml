@@ -56,12 +56,11 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/tillana_medium"
-        android:text="बुकिंग"
+        android:fontFamily="@font/jua"
+        android:text="Booking Detail"
         android:textAlignment="center"
         android:textColor="#121212"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,9 +71,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="70dp"
         app:cardBackgroundColor="#DFFA937A"
         app:cardElevation="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,7 +89,6 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -101,13 +99,13 @@
 
                     <EditText
                         android:id="@+id/editText4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="40dp"
                         android:layout_marginEnd="30dp"
-                        android:fontFamily="@font/tillana_medium"
-                        android:hint="पूरा नाम"
+                        android:fontFamily="@font/jua"
+                        android:hint="Full Name"
                         android:textAlignment="center"
                         android:textColor="#242424"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -115,17 +113,56 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:id="@+id/editText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:layout_marginEnd="30dp"
-                        android:fontFamily="@font/tillana_medium"
+                        android:fontFamily="@font/jua"
+                        android:hint="Full Address"
+                        android:textAlignment="center"
                         android:textColor="#242424"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/editText4" />
 
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/jua"
+                        android:text="Select date of marrage"
+                        android:textColor="#242424"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/jua"
+                        android:text="Select Location"
+                        android:textColor="#242424"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:fontFamily="@font/jua"
+                        android:text="Choose location of your City"
+                        android:textColor="#494949"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
