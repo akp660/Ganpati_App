@@ -34,12 +34,12 @@
         android:id="@+id/materialCardView6"
         android:layout_width="40sp"
         android:layout_height="40sp"
-        android:layout_marginStart="20dp"
-        app:cardElevation="12sp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         app:cardBackgroundColor="#FB8A71"
         app:cardCornerRadius="50sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="#757575">
 
@@ -53,8 +53,9 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/back_icon"
                 android:layout_marginBottom="10dp"
+                android:rotation="180"
+                android:src="@drawable/back_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +68,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView5"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="15dp"
@@ -89,81 +90,118 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ScrollView
+                <TextView
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="true"
+                    android:layout_marginTop="100dp"
+                    android:fontFamily="@font/jua"
+                    android:text="Pt. Hareram Shastri"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/jua"
+                    android:text="Email:- ganapati7255@gmail.com"
+                    android:textColor="#1E1E1E"
+                    android:textColorLink="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/jua"
+                    android:text="Ph. No:- 9798554810"
+                    android:textColor="#000000"
+                    android:textColorLink="#01134C"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/jua"
+                    android:text="Address:- Karmic Nagar, Dhanbad, 826004 \n    near Delhi Public School."
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardBackgroundColor="#DFFA937A"
+                    app:cardElevation="100sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toBottomOf="@+id/textView13"
+                    app:strokeColor="#000">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/textView7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="100dp"
+                            android:layout_marginTop="15dp"
                             android:fontFamily="@font/jua"
-                            android:text="Pt. Hareram Shastri"
-                            android:textColor="#000000"
-                            android:textSize="18sp"
+                            android:text="Send your Query"
+                            android:textColor="#232323"
+                            android:textSize="16sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/textView11"
-                            android:layout_width="wrap_content"
+                        <EditText
+                            android:id="@+id/editText"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="8dp"
                             android:fontFamily="@font/jua"
-                            android:text="Email:- ganapati7255@gmail.com"
-                            android:textColor="#1E1E1E"
-                            android:textColorLink="#000000"
-                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:hint="Write Your Query"
+                            android:inputType="text|textAutoComplete"
+                            android:textColor="#252525"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:fontFamily="@font/jua"
-                            android:text="Ph. No:- 9798554810"
-                            android:textColor="#000000"
-                            android:textColorLink="#01134C"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-                        <TextView
-
-                            android:id="@+id/textView13"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-                            android:fontFamily="@font/jua"
-                            android:text="Address:- Karmic Nagar, Dhanbad, 826004 \n    near Delhi Public School."
-                            android:textAlignment="center"
-                            android:textColor="#000000"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                </ScrollView>
+                </com.google.android.material.card.MaterialCardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -202,60 +240,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp"
-                app:cardBackgroundColor="#DFFA937A"
-                app:cardElevation="8sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-                app:strokeColor="#000">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/jua"
-                        android:text="Send your Query"
-                        android:textColor="#232323"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <EditText
-                        android:id="@+id/editText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="@font/jua"
-                        android:gravity="center"
-                        android:hint="Write Your Query"
-                        android:inputType="text|textAutoComplete"
-                        android:textColor="#252525"
-                        android:textSize="12sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </com.google.android.material.card.MaterialCardView>
 
 
 
@@ -267,6 +252,7 @@
         android:id="@+id/editTextPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:autoLink="phone"
         android:fontFamily="@font/jua"
         android:linksClickable="true"
@@ -276,8 +262,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView5" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="150sp"
