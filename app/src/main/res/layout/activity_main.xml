@@ -191,7 +191,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardView9"
                 android:layout_width="match_parent"
-                android:layout_height="250sp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="10dp"
@@ -221,6 +221,51 @@
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/materialCardView11"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="25dp"
+                        app:cardBackgroundColor="#000"
+                        app:cardCornerRadius="50sp"
+                        app:cardElevation="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#FF0000"
+                        app:strokeWidth="2sp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/animationView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/youtube_animation" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <WebView
+                        android:id="@+id/webView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="65dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintDimensionRatio="16:9" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -280,19 +325,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <ImageView
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/spotify_animation"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="5dp"
                                 android:layout_marginBottom="5dp"
-                                android:src="@drawable/spotify"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.0"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/spotify_animation" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 

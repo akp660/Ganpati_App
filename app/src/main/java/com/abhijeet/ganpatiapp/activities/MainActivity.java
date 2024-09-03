@@ -27,6 +27,10 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
@@ -72,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database;
     CardView chat;
     TextView mainText;
-
     ImageView image, buttonTest;
     StorageReference reference;
     ScrollView scrollView;
+    WebView webView;
     ViewPager viewPager;
     String personalUID="";
     RecyclerView aartiRecyclerView;
@@ -88,6 +92,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        webView = findViewById(R.id.webView);
+
+        // Enable JavaScript
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setUseWideViewPort(true);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setMediaPlaybackRequiresUserGesture(false); // Enable auto-play for videos
+
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.setWebViewClient(new WebViewClient());
+
+        // Load YouTube video
+        String video = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/DdguUbMnHx0?si=tJCEaZ1QHRJ43TEP\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";
+        webView.loadData(video, "text/html", "utf-8");
 
 //whatshapp
         chat = findViewById(R.id.whatshapp_icon);
@@ -143,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotourl("https://wa.me/+919155182211");
+                gotourl("https://wa.me/+919798554810");
 
                 Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                 if (vibrator != null) {
@@ -175,6 +197,8 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
 
         // Add handler to show the advertisement dialog after 10 seconds
         Handler alertHandler = new Handler();
@@ -210,7 +234,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Show the dialog
-        dialog.show();
+        // dialog.show();
     }
 
     public void profile(){
