@@ -15,11 +15,9 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
@@ -27,17 +25,15 @@ import androidx.cardview.widget.CardView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Objects;
 
 public class Profile extends AppCompatActivity {
 
@@ -48,11 +44,7 @@ public class Profile extends AppCompatActivity {
     CardView sendbtn;
     EditText message;
 
-    String messagestr, phonestr = "";
-
-
-
-    //TextView nameTextView, emailTextView, phoneTextView, addressTextView;
+    String messagestr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,95 +54,46 @@ public class Profile extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
-        //nameTextView = findViewById(R.id.textView10);
-        //emailTextView = findViewById(R.id.textView11);
-        //phoneTextView = findViewById(R.id.textView12);
-        //addressTextView = findViewById(R.id.textView13);
-        FirebaseStorage storage = FirebaseStorage.getInstance();
+        FirebaseStorage.getInstance();
         reference = FirebaseStorage.getInstance().getReference("Priest_Profile/Profile_Pic.png");
         image = findViewById(R.id.imageView4);
 
+        // Name of the image file to be saved locally
+        String LOCAL_IMAGE_NAME = "Profile_Pic.png";
+        File localFile = new File(getFilesDir(), LOCAL_IMAGE_NAME);
 
-        // setting image in image view from firebase.
-
-        try {
-            File file = File.createTempFile("tempfile", ".png");
-            reference.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-                    Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-                    image.setImageBitmap(bitmap);
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(Profile.this, "error", Toast.LENGTH_SHORT).show();
-                }
-            });
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (localFile.exists()) {
+            // Load image from local storage if it exists
+            Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+            image.setImageBitmap(bitmap);
+        } else {
+            // Download the image from Firebase Storage and save it locally
+            downloadAndSaveImage(localFile);
         }
-
 
         CardView back = findViewById(R.id.materialCardView6);
         back.setOnClickListener(view -> back());
 
-//      DatabaseReference ref = database.getReference().child(firebaseAuth.getUid());
-        DatabaseReference ref = database.getReference().child("Users").child(firebaseAuth.getUid());
-
-
-
-        /*ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//              Toast.makeText(Profile.this, dataSnapshot.child("Name").getValue(String.class), Toast.LENGTH_SHORT).show();
-                nameTextView.setText(dataSnapshot.child("Name").getValue(String.class));
-                emailTextView.setText(dataSnapshot.child("Email").getValue(String.class));
-                phoneTextView.setText(dataSnapshot.child("Phone").getValue(String.class));
-                addressTextView.setText(dataSnapshot.child("Address").getValue(String.class));
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/
-
+        database.getReference().child("Users").child(Objects.requireNonNull(firebaseAuth.getUid()));
 
         message = findViewById(R.id.editText);
         sendbtn = findViewById(R.id.sendbtn);
-
-
-//        sendbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(Profile.this, String.valueOf(iswhatsappInstalled()), Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
         sendbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 messagestr = message.getText().toString();
 
-                if(!messagestr.isEmpty()){
-
-                    if(iswhatsappInstalled()){
-
-                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=+919155182211&text=" + messagestr));
+                if (!messagestr.isEmpty()) {
+                    if (iswhatsappInstalled()) {
+                        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone=+919798554810&text=" + messagestr));
                         startActivity(i);
                         message.setText("");
-
-                    }else {
-
-                        Toast.makeText(Profile.this,"Whatsapp is not installed",Toast.LENGTH_SHORT).show();
-
+                    } else {
+                        Toast.makeText(Profile.this, "Whatsapp is not installed", Toast.LENGTH_SHORT).show();
                     }
-
-                }else {
-
-                    Toast.makeText(Profile.this,"Write your Query in the box and try again.",Toast.LENGTH_LONG).show();
-
+                } else {
+                    Toast.makeText(Profile.this, "Write your Query in the box and try again.", Toast.LENGTH_LONG).show();
                 }
 
                 Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -161,38 +104,64 @@ public class Profile extends AppCompatActivity {
                         vibrator.vibrate(50);
                     }
                 }
-
             }
-
         });
+    }
 
+    private void downloadAndSaveImage(File localFile) {
+        try {
+            reference.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                    Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
+                    image.setImageBitmap(bitmap);
+                    saveImageLocally(bitmap, localFile);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(Profile.this, "Error downloading image", Toast.LENGTH_SHORT).show();
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void saveImageLocally(Bitmap bitmap, File file) {
+        try (FileOutputStream fos = new FileOutputStream(file)) {
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private boolean iswhatsappInstalled() {
         PackageManager packageManager = getPackageManager();
-        boolean whatsappInstalled=false;
+        boolean whatsappInstalled = false;
         try {
             packageManager.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES);
             whatsappInstalled = true;
         } catch (PackageManager.NameNotFoundException e) {
             whatsappInstalled = false;
         }
-
-//        Toast.makeText(this, String.valueOf(whatsappInstalled), Toast.LENGTH_SHORT).show();
-
         return whatsappInstalled;
     }
 
-
-
-
-
-    public void back(){
+    public void back() {
         Intent intent = new Intent(Profile.this, MainActivity.class);
         startActivity(intent);
-// for animation
-        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
-// for vibration
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        vibrate();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    private void vibrate() {
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if (vibrator != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -201,13 +170,5 @@ public class Profile extends AppCompatActivity {
                 vibrator.vibrate(50);
             }
         }
-    }
-
-
-    @Override
-    public void finish() {
-        super.finish();
-// for animation
-        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
     }
 }

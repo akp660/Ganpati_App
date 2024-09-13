@@ -11,8 +11,8 @@ android {
         applicationId "com.abhijeet.ganpatiapp"
         minSdk 24
         targetSdk 34
-        versionCode 13
-        versionName "1.6.1"
+        versionCode 14
+        versionName "1.6.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,7 +40,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-perf-ktx:21.0.1'
     implementation 'com.google.firebase:firebase-storage-ktx:21.0.0'
     implementation 'com.google.firebase:firebase-storage:21.0.0'
-    implementation 'androidx.activity:activity:1.9.1'
+    implementation 'androidx.activity:activity:1.9.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
@@ -49,5 +49,5 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:21.2.0'
     implementation "com.airbnb.android:lottie:6.1.0"
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
-    implementation "androidx.constraintlayout:constraintlayout:2.2.0-alpha14"
+    implementation "androidx.constraintlayout:constraintlayout:2.2.0-beta01"
 }
