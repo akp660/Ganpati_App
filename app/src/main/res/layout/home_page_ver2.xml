@@ -400,7 +400,7 @@
                         android:layout_marginTop="28dp"
                         android:layout_marginEnd="10dp"
                         android:fontFamily="@font/jua"
-                        android:text="Horescope Matching"
+                        android:text="Horoscopes Matching"
                         android:textColor="#212121"
                         android:textSize="24sp"
                         android:textStyle="bold"
