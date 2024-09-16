@@ -4,18 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFCA80"
+    android:background="#D2E0FB"
     tools:context=".activities.Kundali_entry">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="-20dp"
-        android:layout_marginTop="-20dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/traingle"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="120dp"
+        android:src="@drawable/chackra_backgrouond"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +22,7 @@
         android:layout_height="40sp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        app:cardBackgroundColor="#FB8A71"
+        app:cardBackgroundColor="#55679C"
         app:cardCornerRadius="50sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -71,10 +68,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="100dp"
-        app:cardBackgroundColor="#DFFA937A"
+        android:layout_marginBottom="80dp"
+        app:cardBackgroundColor="#7C93C3"
         app:cardElevation="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +83,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
             <ScrollView
+                android:id="@+id/scrollView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -152,7 +151,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/background_kundalii">
+                            android:background="#55679C">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -199,7 +198,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/background_kundalii">
+                            android:background="#55679C">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -242,7 +241,7 @@
                         android:layout_marginTop="35dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="20dp"
-                        app:cardBackgroundColor="#FD7F59"
+                        app:cardBackgroundColor="#55679C"
                         app:cardCornerRadius="12sp"
                         app:cardElevation="8sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -346,18 +345,18 @@
                 android:id="@+id/send_btn"
                 android:layout_width="50sp"
                 android:layout_height="50sp"
-                app:strokeColor="@color/black"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="25dp"
                 app:cardCornerRadius="50sp"
                 app:cardElevation="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:strokeColor="@color/black">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/background_kundalii">
+                    android:background="#7C93C3">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -384,7 +383,7 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="Soft copy will be provided by email"
         android:textColor="#323232"
         app:layout_constraintEnd_toEndOf="parent"
@@ -394,8 +393,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:linksClickable="true"
+        android:layout_marginBottom="5dp"
         android:autoLink="phone"
+        android:linksClickable="true"
         android:text="Fore more detail call on 9155182211"
         android:textColor="#171717"
         app:layout_constraintBottom_toBottomOf="parent"

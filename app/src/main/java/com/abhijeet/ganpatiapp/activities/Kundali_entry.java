@@ -146,7 +146,7 @@ public class Kundali_entry extends AppCompatActivity {
 
 //for back button.
     public void home(){
-        Intent intent = new Intent(Kundali_entry.this, MainActivity.class);
+        Intent intent = new Intent(Kundali_entry.this, HomePageVer2Activity.class);
         startActivity(intent);
 // for animation
         overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
