@@ -11,9 +11,10 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginStart="120dp"
-        android:src="@drawable/chackra_backgrouond"
+        android:layout_marginStart="80dp"
+        android:src="@drawable/background_chakra"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
