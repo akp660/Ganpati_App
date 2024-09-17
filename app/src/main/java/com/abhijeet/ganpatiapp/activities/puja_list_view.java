@@ -35,7 +35,7 @@ public class puja_list_view extends AppCompatActivity {
     RecyclerView puja_list_recycler_view;
     LinearLayoutManager layoutManager;
     PujaListViewAdapter adapter;
-    CardView backButton, sendBtn;
+    CardView sendBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,6 @@ public class puja_list_view extends AppCompatActivity {
         setContentView(R.layout.puja_list_view);
         sendBtn = findViewById(R.id.order);
         list = new ArrayList<>();
-        backButton = findViewById(R.id.backButton);
         title = findViewById(R.id.textView29);
 
         Intent intent = getIntent();
@@ -71,13 +70,6 @@ public class puja_list_view extends AppCompatActivity {
             }
         });
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,16 +87,7 @@ public class puja_list_view extends AppCompatActivity {
                 } else {
                     Toast.makeText(puja_list_view.this, "All fields are required", Toast.LENGTH_LONG).show();
                 }
-
-                // Vibration code...
-                Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                if (vibrator != null) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        vibrator.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
-                    } else {
-                        vibrator.vibrate(50);
-                    }
-                }
+                triggerVibration();
             }
         });
     }
@@ -132,5 +115,30 @@ public class puja_list_view extends AppCompatActivity {
         adapter = new PujaListViewAdapter(list);
         puja_list_recycler_view.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+    }
+
+    // Override the onBackPressed to handle custom back press logic
+    @Override
+    public void onBackPressed() {
+        // Handle the back press like you would in the back button click
+        super.onBackPressed();
+        Intent intent = new Intent(puja_list_view.this, Puja_list.class);
+        startActivity(intent);
+
+        // Trigger the slide-in animation
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+
+    }
+
+    // Trigger vibration
+    private void triggerVibration() {
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if (vibrator != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                vibrator.vibrate(50);
+            }
+        }
     }
 }
