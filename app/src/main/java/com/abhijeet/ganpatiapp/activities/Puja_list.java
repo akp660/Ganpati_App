@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -31,14 +32,11 @@ public class Puja_list extends AppCompatActivity {
     LinearLayoutManager layoutManager;
     List<PujaListModelClass> list;
     PujaListAdapter adapter;
-    CardView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puja_list);
-
-        backButton = findViewById(R.id.backButton);
 
         list = new ArrayList<>();
         database = FirebaseDatabase.getInstance();
@@ -60,12 +58,6 @@ public class Puja_list extends AppCompatActivity {
             }
         });
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
     }
 
     public void initRecyclerView() {
@@ -76,5 +68,17 @@ public class Puja_list extends AppCompatActivity {
         adapter = new PujaListAdapter(list);
         pujaListRecyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Handle the back press like you would in the back button click
+        super.onBackPressed();
+        Intent intent = new Intent(Puja_list.this, HomePageVer2Activity.class);
+        startActivity(intent);
+
+        // Trigger the slide-in animation
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+
     }
 }
