@@ -24,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:fontFamily="@font/tillana_medium"
-        android:text="गणेश जी की आरती"
         android:textAlignment="center"
         android:textColor="#121212"
         android:textSize="24sp"
@@ -57,7 +56,8 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
