@@ -15,7 +15,7 @@
         android:fontFamily="@font/kalam"
         android:text="Aarti Name"
         android:textAlignment="textStart"
-        android:textColor="#000000"
+        android:textColor="#D2E0FB"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/materialDivider"
         app:layout_constraintEnd_toStartOf="@+id/textView26"
@@ -42,7 +42,7 @@
         android:layout_marginEnd="15dp"
         android:fontFamily="@font/kalam"
         android:text="Read now"
-        android:textColor="#252525"
+        android:textColor="#D2E0FB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/materialDivider"
         app:layout_constraintTop_toTopOf="parent" />

@@ -23,7 +23,7 @@ import com.abhijeet.ganpatiapp.R;
 public class HomePageVer2Activity extends AppCompatActivity {
 
     LinearLayout layout, detailsText;
-    CardView kundali;
+    CardView kundali, aarti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,32 @@ public class HomePageVer2Activity extends AppCompatActivity {
         detailsText = findViewById(R.id.details);
         layout = findViewById(R.id.layout);
         kundali = findViewById(R.id.cardView11);
+        aarti = findViewById(R.id.aarti);
+
+
+
+
+// Aarti OnClickListener
+
+        aarti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an Intent to start the Kundali_entry activity
+                Intent intent = new Intent(HomePageVer2Activity.this, Aarti_list.class);
+                startActivity(intent); // Use startActivity() for a single activity
+// for animation
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+
+                Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                if (vibrator != null) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        vibrator.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
+                    } else {
+                        vibrator.vibrate(50);
+                    }
+                }
+            }
+        });
 
 // Kundali OnClickListener
         kundali.setOnClickListener(new View.OnClickListener() {
