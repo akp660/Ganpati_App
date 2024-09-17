@@ -41,7 +41,6 @@ public class Kundali_entry extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kundali_entry);
 
-        backButton = findViewById(R.id.backButton);
         Child_Name = findViewById(R.id.editText3);
         Birth_Date = findViewById(R.id.dateText4);
         Birth_Time = findViewById(R.id.timeText5);
@@ -56,6 +55,7 @@ public class Kundali_entry extends AppCompatActivity {
         Birth_Date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                triggerVibration();
                 showDatePicker();
             }
         });
@@ -63,6 +63,7 @@ public class Kundali_entry extends AppCompatActivity {
         Birth_Time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                triggerVibration();
                 showTimePicker();
             }
         });
@@ -110,20 +111,10 @@ public class Kundali_entry extends AppCompatActivity {
                     Toast.makeText(Kundali_entry.this, "All fields are required", Toast.LENGTH_LONG).show();
                 }
 
-                // Vibration code...
-                Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                if (vibrator != null) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        vibrator.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
-                    } else {
-                        vibrator.vibrate(50);
-                    }
-                }
+                // Trigger vibration
+                triggerVibration();
             }
         });
-
-//onClickListner for Back Button.
-        backButton.setOnClickListener(view -> home());
 
 
     }
@@ -144,23 +135,6 @@ public class Kundali_entry extends AppCompatActivity {
         return whatsappInstalled;
     }
 
-//for back button.
-    public void home(){
-        Intent intent = new Intent(Kundali_entry.this, HomePageVer2Activity.class);
-        startActivity(intent);
-// for animation
-        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right);
-// for vibration
-        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        if (vibrator != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                vibrator.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
-            } else {
-                vibrator.vibrate(50);
-            }
-        }
-    }
-
     public void showDatePicker(){
         CalendarConstraints.Builder constraintBuilder = new CalendarConstraints.Builder();
         constraintBuilder.setEnd(Calendar.getInstance().getTimeInMillis());
@@ -177,7 +151,7 @@ public class Kundali_entry extends AppCompatActivity {
             @Override
             public void onPositiveButtonClick(Object selection) {
                 String first = selection.toString();
-                Long second = Long.valueOf(first);
+                long second = Long.parseLong(first);
                 Birth_Date.setText(convertDate(second));
             }
         });
@@ -219,6 +193,31 @@ public class Kundali_entry extends AppCompatActivity {
         String formattedDate = dateFormat.format(date);
 
         return formattedDate;
+    }
+
+    // Override the onBackPressed to handle custom back press logic
+    @Override
+    public void onBackPressed() {
+        // Handle the back press like you would in the back button click
+        super.onBackPressed();
+        Intent intent = new Intent(Kundali_entry.this, HomePageVer2Activity.class);
+        startActivity(intent);
+
+        // Trigger the slide-in animation
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+
+    }
+
+    // Trigger vibration
+    private void triggerVibration() {
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if (vibrator != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                vibrator.vibrate(50);
+            }
+        }
     }
 
 }
