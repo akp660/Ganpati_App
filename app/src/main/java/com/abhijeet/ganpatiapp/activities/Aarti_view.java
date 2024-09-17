@@ -2,7 +2,6 @@ package com.abhijeet.ganpatiapp.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -10,7 +9,6 @@ import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.widget.TextView;
-
 import com.abhijeet.ganpatiapp.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -71,20 +69,6 @@ public class Aarti_view extends AppCompatActivity {
         // Trigger the slide-in animation
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 
-        // Trigger vibration
-        triggerVibration();
-    }
-
-    // Trigger vibration
-    private void triggerVibration() {
-        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        if (vibrator != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                vibrator.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
-            } else {
-                vibrator.vibrate(50);
-            }
-        }
     }
 
 }
