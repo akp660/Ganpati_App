@@ -67,18 +67,6 @@ public class Aarti_list extends AppCompatActivity {
         });
     }
 
-    // Trigger vibration
-    private void triggerVibration() {
-        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        if (vibrator != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                vibrator.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE));
-            } else {
-                vibrator.vibrate(50);
-            }
-        }
-    }
-
     // Initialize RecyclerView for displaying the list of Aartis
     public void initRecyclerView() {
         aartiRecyclerView = findViewById(R.id.aartiRecyclerView);
@@ -100,8 +88,5 @@ public class Aarti_list extends AppCompatActivity {
 
         // Trigger the slide-in animation
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-
-        // Trigger vibration
-        triggerVibration();
     }
 }
