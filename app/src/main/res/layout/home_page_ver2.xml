@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2E0FB"
+    android:background="#FEFFD2"
     tools:context=".activities.HomePageVer2Activity">
 
     <ImageView
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:onClick="expand"
-                app:cardBackgroundColor="#7C93C3"
+                app:cardBackgroundColor="#EAF9D689"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="12dp"
                 app:contentPaddingBottom="20dp"
@@ -229,7 +229,7 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="#55679C">
+                                android:background="#FF7D29">
 
                                 <ImageView
                                     android:layout_width="match_parent"
@@ -363,7 +363,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#7C93C3">
+                            android:background="#FFC78C">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -476,11 +476,12 @@
             </androidx.cardview.widget.CardView>
 
             <ImageView
-                android:layout_width="200dp"
+                android:layout_width="220dp"
                 android:layout_height="220dp"
-                android:layout_marginEnd="-30dp"
+                android:layout_marginEnd="-25dp"
+                android:layout_marginBottom="10dp"
                 android:elevation="20dp"
-                android:src="@drawable/temple"
+                android:src="@drawable/temple_1"
                 app:layout_constraintBottom_toBottomOf="@+id/cardView13"
                 app:layout_constraintEnd_toEndOf="@+id/cardView13" />
 
@@ -569,7 +570,7 @@
                 android:layout_margin="20dp"
                 app:cardElevation="20dp"
                 app:contentPadding="20dp"
-                app:cardBackgroundColor="#7C93C3"
+                app:cardBackgroundColor="#E67C93C3"
                 app:cardCornerRadius="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
