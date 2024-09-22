@@ -65,7 +65,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="20dp"
-                            android:fontFamily="@font/macondo_swash_caps"
+                            android:fontFamily="@font/kalam"
                             android:text="Pandit Ji     (Astrologer)"
                             android:textAlignment="center"
                             android:textColor="#141414"
@@ -195,13 +195,16 @@
 
                         <TextView
                             android:id="@+id/textView36"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/jua"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/kalam"
                             android:text="Aarti"
+                            android:textAlignment="center"
                             android:textColor="#161616"
-                            android:textSize="20sp"
+                            android:textSize="34sp"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -253,6 +256,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/aarti_background">
+
+                        <TextView
+                            android:id="@+id/puja_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/kalam"
+                            android:text="Puja List"
+                            android:textAlignment="center"
+                            android:textColor="#161616"
+                            android:textSize="34sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="40dp"
@@ -331,15 +351,18 @@
 
                     <TextView
                         android:id="@+id/textView35"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="28dp"
-                        android:fontFamily="@font/jua"
+                        android:layout_marginEnd="120dp"
+                        android:fontFamily="@font/kalam"
                         android:text="Kundali"
+                        android:textAlignment="center"
                         android:textColor="#212121"
-                        android:textSize="24sp"
+                        android:textSize="30sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView15"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -419,15 +442,16 @@
                         app:layout_constraintVertical_bias="1.0" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="120dp"
                         android:layout_marginTop="28dp"
                         android:layout_marginEnd="10dp"
-                        android:fontFamily="@font/jua"
+                        android:fontFamily="@font/kalam"
                         android:text="Horoscopes Matching"
+                        android:textAlignment="center"
                         android:textColor="#212121"
-                        android:textSize="24sp"
+                        android:textSize="30sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -515,11 +539,12 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="28dp"
                         android:layout_marginEnd="150dp"
-                        android:fontFamily="@font/jua"
+                        android:fontFamily="@font/kalam"
                         android:text="Book Now"
                         android:textAlignment="center"
-                        android:textColor="#262626"
-                        android:textSize="24sp"
+                        android:textColor="#212121"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
