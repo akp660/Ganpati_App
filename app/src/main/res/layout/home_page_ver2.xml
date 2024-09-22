@@ -5,10 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FEFFD2"
+    android:background="#FCFDE8"
     tools:context=".activities.HomePageVer2Activity">
 
     <ImageView
+        android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginStart="80dp"
@@ -31,13 +32,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:onClick="expand"
-                app:cardBackgroundColor="#EAF9D689"
+                app:cardBackgroundColor="#F2FBE2B6"
+                app:strokeColor="#ABFD5555"
+                app:strokeWidth="1.5dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="12dp"
                 app:contentPaddingBottom="20dp"
@@ -85,18 +88,6 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
-
-                                <ImageView
-                                    android:id="@+id/imageView14"
-                                    android:layout_width="140dp"
-                                    android:layout_height="140dp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_marginEnd="-70dp"
-                                    android:layout_marginBottom="5dp"
-                                    android:src="@drawable/chackra_backgrouond"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -153,7 +144,7 @@
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
             <ImageView
                 android:id="@+id/imageView17"
@@ -216,9 +207,10 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
+                            app:strokeColor="@color/black"
                             android:layout_marginStart="15dp"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="50dp"
@@ -229,7 +221,7 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="#FF7D29">
+                                android:background="#FF9292">
 
                                 <ImageView
                                     android:layout_width="match_parent"
@@ -243,7 +235,7 @@
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -262,9 +254,10 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/aarti_background">
 
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
+                            app:strokeColor="@color/black"
                             android:layout_marginStart="15dp"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="50dp"
@@ -275,7 +268,7 @@
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="#55679C">
+                                android:background="#FF9292">
 
                                 <ImageView
                                     android:layout_width="match_parent"
@@ -289,7 +282,7 @@
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -350,9 +343,10 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        app:strokeColor="#494949"
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="15dp"
                         app:cardCornerRadius="50dp"
@@ -363,7 +357,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#FFC78C">
+                            android:background="#FF9292">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -380,7 +374,7 @@
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -439,9 +433,10 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        app:strokeColor="#494949"
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="15dp"
                         app:cardCornerRadius="50dp"
@@ -452,7 +447,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#4267BF">
+                            android:background="#FF9292">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -469,13 +464,14 @@
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
             <ImageView
+                android:id="@+id/imageView11"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_marginEnd="-25dp"
@@ -509,7 +505,8 @@
                         android:src="@drawable/chackra_backgrouond"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.333" />
 
                     <TextView
                         android:id="@+id/textView37"
@@ -527,9 +524,10 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
+                        app:strokeColor="#494949"
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="15dp"
                         app:cardCornerRadius="50dp"
@@ -540,7 +538,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#384675">
+                            android:background="#FF9292">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -557,7 +555,7 @@
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -570,7 +568,7 @@
                 android:layout_margin="20dp"
                 app:cardElevation="20dp"
                 app:contentPadding="20dp"
-                app:cardBackgroundColor="#E67C93C3"
+                app:cardBackgroundColor="#F2FBE2B6"
                 app:cardCornerRadius="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -736,6 +734,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
+                android:id="@+id/textView38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -750,5 +749,76 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CDE1FF">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/inria_sans"
+                android:text="Chat Now"
+                android:textColor="#141414"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="-5dp"
+        app:cardCornerRadius="50dp"
+        app:strokeColor="#038508"
+        app:strokeWidth="2dp"
+        app:cardElevation="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView6"
+        app:layout_constraintEnd_toEndOf="@+id/cardView6"
+        app:layout_constraintTop_toTopOf="@+id/cardView6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F74CC95A">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="-12dp"
+                android:layout_marginTop="-12dp"
+                android:layout_marginEnd="-12dp"
+                android:layout_marginBottom="-12dp"
+                android:src="@drawable/whatshapp_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

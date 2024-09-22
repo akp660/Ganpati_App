@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2E0FB"
+    android:background="#FCFDE8"
     tools:context=".activities.Kundali_entry">
 
     <ImageView
@@ -41,7 +41,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="80dp"
-        app:cardBackgroundColor="#F37C93C3"
+        app:cardBackgroundColor="#EDFF9292"
         app:cardElevation="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,17 +71,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="35dp"
-                        android:fontFamily="@font/imprima"
+                        android:fontFamily="@font/inria_sans"
                         android:text="Child Detail"
                         android:textColor="#222222"
                         android:textSize="24sp"
+                        android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
                         android:id="@+id/editText3"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="50dp"
                         android:layout_marginTop="20dp"
@@ -89,7 +90,7 @@
                         android:fontFamily="@font/imprima"
                         android:hint="Child Name"
                         android:textAlignment="center"
-                        android:textColor="#121212"
+                        android:textColor="#000000"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +125,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#55679C">
+                            android:background="#FB6F6F">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -171,7 +172,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#55679C">
+                            android:background="#FB6F6F">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -192,7 +193,7 @@
 
                     <EditText
                         android:id="@+id/editText6"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="50dp"
                         android:layout_marginTop="5dp"
@@ -201,7 +202,7 @@
                         android:hint="Birth Location"
                         android:shadowColor="#000"
                         android:textAlignment="center"
-                        android:textColor="#121212"
+                        android:textColor="#000000"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -209,12 +210,12 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="350sp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="35dp"
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="20dp"
-                        app:cardBackgroundColor="#55679C"
+                        app:cardBackgroundColor="#FF8080"
                         app:cardCornerRadius="12sp"
                         app:cardElevation="8sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -232,18 +233,19 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="35dp"
-                                android:fontFamily="@font/imprima"
+                                android:fontFamily="@font/inria_sans"
                                 android:text="Parent Detail"
                                 android:textAlignment="center"
                                 android:textColor="#191919"
                                 android:textSize="20sp"
+                                android:textStyle="bold"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <EditText
                                 android:id="@+id/editText8"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="35dp"
@@ -259,7 +261,7 @@
 
                             <EditText
                                 android:id="@+id/editText9"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="5dp"
@@ -275,7 +277,7 @@
 
                             <EditText
                                 android:id="@+id/editText10"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="5dp"
@@ -291,17 +293,19 @@
 
                             <EditText
                                 android:id="@+id/editText11"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginEnd="40dp"
+                                android:layout_marginBottom="40dp"
                                 android:fontFamily="@font/imprima"
                                 android:hint="Phone Number"
                                 android:inputType="number"
                                 android:textAlignment="center"
                                 android:textColor="#202020"
                                 android:textSize="14sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/editText10" />
@@ -324,20 +328,21 @@
                 app:cardElevation="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:strokeColor="@color/black">
+                app:strokeWidth="2dp"
+                app:strokeColor="#FF0000">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#7C93C3">
+                    android:layout_height="47dp"
+                    android:background="#FCFDE2">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
                         android:src="@drawable/send"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -369,7 +374,7 @@
         android:layout_marginBottom="5dp"
         android:autoLink="phone"
         android:linksClickable="true"
-        android:text="Fore more detail call on 9155182211"
+        android:text="Fore more detail call on 9798554810"
         android:textColor="#171717"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

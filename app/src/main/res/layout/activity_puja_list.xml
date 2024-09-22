@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2E0FB"
+    android:background="#FCFDE8"
     tools:context=".activities.Puja_list">
 
     <ImageView
@@ -41,7 +41,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="20dp"
-        app:cardBackgroundColor="#F555679C"
+        app:cardBackgroundColor="#EDFF9292"
         app:cardCornerRadius="12sp"
         app:cardElevation="12sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D2E0FB"
+    android:background="#FCFDE8"
     tools:context=".activities.puja_list_view">
 
     <ImageView
@@ -41,7 +41,7 @@
         android:layout_marginBottom="20dp"
         app:cardCornerRadius="12sp"
         app:cardElevation="8sp"
-        app:cardBackgroundColor="#F555679C"
+        app:cardBackgroundColor="#EDFF9292"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +84,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#7C93C3">
+            android:background="#9CFFA4">
 
             <ImageView
                 android:layout_width="match_parent"
