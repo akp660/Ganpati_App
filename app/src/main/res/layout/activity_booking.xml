@@ -5,66 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFCA80"
+    android:background="#FCFDE8"
     tools:context=".activities.booking">
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="-20dp"
-        android:layout_marginTop="-20dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/traingle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@id/backButton"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        app:cardBackgroundColor="#FB8A71"
-        app:cardCornerRadius="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/back_icon"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/jua"
         android:text="Booking Detail"
         android:textAlignment="center"
         android:textColor="#121212"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView3"
@@ -74,7 +30,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="70dp"
-        app:cardBackgroundColor="#DFFA937A"
+        app:cardBackgroundColor="#EDFF9292"
         app:cardElevation="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,6 +45,7 @@
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -176,23 +133,26 @@
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/inria_sans"
         android:text="Soft copy will be provided by email"
         android:textColor="#323232"
+        app:layout_constraintBottom_toTopOf="@+id/textView42"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView3" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/textView42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:linksClickable="true"
+        android:layout_marginBottom="12dp"
         android:autoLink="phone"
+        android:fontFamily="@font/inria_sans"
+        android:linksClickable="true"
         android:text="Fore more detail call on 9155182211"
         android:textColor="#171717"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
