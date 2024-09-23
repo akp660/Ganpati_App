@@ -147,6 +147,16 @@
             </com.google.android.material.card.MaterialCardView>
 
             <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="65dp"
+                android:elevation="5dp"
+                android:src="@drawable/jyoti"
+                app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+                app:layout_constraintStart_toStartOf="@+id/frameLayout" />
+
+            <ImageView
                 android:id="@+id/imageView17"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
@@ -159,12 +169,12 @@
 
             <ImageView
                 android:id="@+id/imageView18"
-                android:layout_width="170dp"
-                android:layout_height="170dp"
-                android:layout_marginEnd="-30dp"
-                android:layout_marginBottom="-10dp"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginEnd="-15dp"
+                android:layout_marginBottom="10dp"
                 android:elevation="5dp"
-                android:src="@drawable/aarti"
+                android:src="@drawable/puja_list_image"
                 app:layout_constraintBottom_toTopOf="@+id/imageView16"
                 app:layout_constraintEnd_toEndOf="@+id/frameLayout" />
 
@@ -277,13 +287,13 @@
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            app:strokeColor="@color/black"
-                            android:layout_marginStart="15dp"
+                            android:layout_marginStart="5dp"
                             android:layout_marginBottom="15dp"
                             app:cardCornerRadius="50dp"
                             app:cardElevation="100dp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent">
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:strokeColor="@color/black">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
@@ -552,13 +562,13 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        app:strokeColor="#494949"
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="15dp"
                         app:cardCornerRadius="50dp"
                         app:cardElevation="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:strokeColor="#494949">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -765,7 +775,7 @@
                 android:layout_margin="20dp"
                 android:fontFamily="@font/inria_sans"
                 android:text="Application Verson:- 2.0.0"
-                android:textColor="#282828"
+                android:textColor="#575757"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -781,6 +791,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="20dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#038508"
         app:cardCornerRadius="50dp"
         app:cardElevation="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView14"
@@ -801,7 +813,7 @@
                 android:fontFamily="@font/inria_sans"
                 android:text="Chat Now"
                 android:textColor="#141414"
-                android:textSize="14sp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
