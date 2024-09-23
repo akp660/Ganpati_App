@@ -22,7 +22,7 @@ import com.abhijeet.ganpatiapp.R;
 public class HomePageVer2Activity extends AppCompatActivity {
 
     LinearLayout layout, detailsText, app_info, app_infp_detail;
-    CardView kundali, aarti, puja_list;
+    CardView kundali, aarti, puja_list, booking;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,24 @@ public class HomePageVer2Activity extends AppCompatActivity {
         app_info = findViewById(R.id.layout_1);
         app_infp_detail = findViewById(R.id.detail_1);
         puja_list = findViewById(R.id.cardView2);
+        booking = findViewById(R.id.cardView13);
+
+
+
+
+
+// Booking OnClickListener
+        booking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Create an Intent to start the Kundali_entry activity
+                Intent intent = new Intent(HomePageVer2Activity.this, booking.class);
+                startActivity(intent); // Use startActivity() for a single activity
+// for animation
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                triggerVibration();
+            }
+        });
 
 
 
