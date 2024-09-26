@@ -52,29 +52,14 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <EditText
-                        android:id="@+id/editText4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="40dp"
-                        android:layout_marginEnd="30dp"
-                        android:fontFamily="@font/jua"
-                        android:hint="Full Name"
-                        android:textAlignment="center"
-                        android:textColor="#242424"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/editText5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="30dp"
                         android:fontFamily="@font/jua"
                         android:hint="Full Address"
@@ -82,7 +67,7 @@
                         android:textColor="#242424"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
                     <TextView
                         android:id="@+id/textView31"
@@ -111,6 +96,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
                     <TextView
+                        android:id="@+id/textView45"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="25dp"
@@ -121,7 +107,36 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:hint="Enter Your Name"
+                        app:hintTextColor="#242424"
+                        app:boxBackgroundColor="#B3FFFFFF"
+                        app:boxCornerRadiusBottomEnd="20dp"
+                        app:boxCornerRadiusTopEnd="20dp"
+                        app:boxCornerRadiusTopStart="15dp"
+                        app:boxStrokeColor="#B76FFD"
+                        app:boxStrokeWidth="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:textColorHint="#383838"
+                            android:padding="10dp"
+                            android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
             </ScrollView>
 
