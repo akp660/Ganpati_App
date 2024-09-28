@@ -79,8 +79,8 @@
                             android:id="@+id/details"
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
-                            android:layout_marginTop="15dp"
                             android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView33">
@@ -90,6 +90,7 @@
                                 android:layout_height="match_parent">
 
                                 <TextView
+                                    android:id="@+id/textView46"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginEnd="20dp"
@@ -108,7 +109,7 @@
                                     android:id="@+id/textView34"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="48dp"
+                                    android:layout_marginTop="35dp"
                                     android:layout_marginEnd="60dp"
                                     android:fontFamily="@font/jua"
                                     android:text="Address:- Baba Sharveshwar Shiv Mandir, Karmic Nagar, Dhanbad, 826004."
@@ -131,10 +132,26 @@
                                     android:text="Ph. No:- 9798554810 / 8789651145."
                                     android:textAlignment="viewStart"
                                     android:textColor="#353535"
-                                    android:textColorLink="#01134C"
+                                    android:textColorLink="#001D80"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:fontFamily="@font/kalam"
+                                    android:text="गृह प्रवेश पूजा / वास्तु शांति पूजा / रुद्राभिषेक पूजा / नवरात्रि दुर्गा पूजा  आदि!"
+                                    android:textAlignment="center"
+                                    android:textColor="#FF3C3C"
+                                    android:textSize="16sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
