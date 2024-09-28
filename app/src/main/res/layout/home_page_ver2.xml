@@ -364,7 +364,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="28dp"
+                        android:layout_marginTop="30dp"
                         android:layout_marginEnd="120dp"
                         android:fontFamily="@font/kalam"
                         android:text="Kundali"
@@ -376,16 +376,49 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/inria_sans"
+                        android:text="Get your Kundali in 24-48hrs. \n Only @ 500/-"
+                        android:textAlignment="center"
+                        android:textColor="#232323"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView44"
+                        app:layout_constraintEnd_toEndOf="@+id/textView35"
+                        app:layout_constraintStart_toStartOf="@+id/textView35"
+                        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginEnd="30dp"
+                        android:fontFamily="@font/inria_sans"
+                        android:text="Hard-Copy &amp; Soft-Copy Both Available."
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/materialCardView8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/materialCardView8" />
+
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/materialCardView8"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        app:strokeColor="#494949"
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="15dp"
                         app:cardCornerRadius="50dp"
                         app:cardElevation="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:strokeColor="#494949">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -637,8 +670,8 @@
                             android:id="@+id/detail_1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
                             android:visibility="gone"
+                            android:layout_marginTop="10dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView39">
@@ -652,10 +685,10 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/inria_sans"
-                                    android:text="Abhijeet Kumar Pandey"
+                                    android:fontFamily="@font/kalam"
+                                    android:text="Buy Me A Coffee"
                                     android:textAlignment="center"
-                                    android:textColor="#1B1B1B"
+                                    android:textColor="#353535"
                                     android:textSize="20sp"
                                     android:textStyle="bold"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -665,96 +698,82 @@
                                 <androidx.constraintlayout.widget.ConstraintLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:padding="10dp"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/textView40">
 
-                                    <com.google.android.material.card.MaterialCardView
-                                        android:id="@+id/cardView15"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_margin="10dp"
-                                        app:cardCornerRadius="500dp"
-                                        app:strokeColor="@color/black"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintEnd_toStartOf="@+id/cardView18"
-                                        app:layout_constraintStart_toStartOf="parent"
-                                        app:layout_constraintTop_toTopOf="parent">
-
-                                        <androidx.constraintlayout.widget.ConstraintLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:background="#55679C">
-
-                                            <ImageView
-                                                android:layout_width="match_parent"
-                                                android:layout_height="match_parent"
-                                                android:layout_marginStart="8dp"
-                                                android:layout_marginTop="8dp"
-                                                android:layout_marginEnd="8dp"
-                                                android:layout_marginBottom="8dp"
-                                                android:src="@drawable/playstore"
-                                                app:layout_constraintBottom_toBottomOf="parent"
-                                                app:layout_constraintEnd_toEndOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent"
-                                                app:layout_constraintTop_toTopOf="parent" />
-
-                                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                                    </com.google.android.material.card.MaterialCardView>
-
-                                    <com.google.android.material.card.MaterialCardView
-                                        android:id="@+id/cardView18"
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_margin="10dp"
-                                        app:strokeColor="@color/black"
-                                        app:cardCornerRadius="500dp"
+                                    <com.google.android.flexbox.FlexboxLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent">
 
-                                        <androidx.constraintlayout.widget.ConstraintLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:background="#55679C">
+                                        <com.google.android.material.card.MaterialCardView
+                                            android:id="@+id/cardView15"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:layout_margin="20dp"
+                                            app:cardCornerRadius="500dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:strokeColor="@color/black">
 
-                                            <ImageView
+                                            <androidx.constraintlayout.widget.ConstraintLayout
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:layout_marginStart="12dp"
-                                                android:layout_marginEnd="12dp"
-                                                android:src="@drawable/email_icon"
-                                                app:layout_constraintEnd_toEndOf="parent"
-                                                app:layout_constraintStart_toStartOf="parent" />
+                                                android:background="#55679C">
 
-                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginStart="8dp"
+                                                    android:layout_marginTop="8dp"
+                                                    android:layout_marginEnd="8dp"
+                                                    android:layout_marginBottom="8dp"
+                                                    android:src="@drawable/playstore"
+                                                    app:layout_constraintBottom_toBottomOf="parent"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintStart_toStartOf="parent"
+                                                    app:layout_constraintTop_toTopOf="parent" />
 
-                                    </com.google.android.material.card.MaterialCardView>
+                                            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                                    <com.google.android.material.card.MaterialCardView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
-                                        android:layout_margin="10dp"
-                                        app:cardCornerRadius="500dp"
-                                        app:strokeColor="@color/black"
-                                        app:layout_constraintBottom_toBottomOf="parent"
-                                        app:layout_constraintEnd_toEndOf="parent"
-                                        app:layout_constraintStart_toEndOf="@+id/cardView18"
-                                        app:layout_constraintTop_toTopOf="parent">
+                                        </com.google.android.material.card.MaterialCardView>
 
-                                        <androidx.constraintlayout.widget.ConstraintLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:background="#55679C">
+                                        <com.google.android.material.card.MaterialCardView
+                                            android:id="@+id/cardView18"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:layout_margin="20dp"
+                                            app:cardCornerRadius="500dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:strokeColor="@color/black">
 
+                                            <androidx.constraintlayout.widget.ConstraintLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="#55679C">
 
-                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginStart="12dp"
+                                                    android:layout_marginEnd="12dp"
+                                                    android:src="@drawable/email_icon"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    app:layout_constraintStart_toStartOf="parent" />
 
-                                    </com.google.android.material.card.MaterialCardView>
+                                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        </com.google.android.material.card.MaterialCardView>
+
+                                    </com.google.android.flexbox.FlexboxLayout>
 
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -825,6 +844,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/whatshapp"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="-5dp"
