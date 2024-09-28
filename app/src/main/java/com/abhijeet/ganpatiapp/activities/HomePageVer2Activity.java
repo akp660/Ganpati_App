@@ -11,7 +11,6 @@ import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -23,7 +22,7 @@ import com.abhijeet.ganpatiapp.R;
 public class HomePageVer2Activity extends AppCompatActivity {
 
     LinearLayout layout, detailsText, app_info, app_infp_detail;
-    CardView kundali, aarti, puja_list, booking, whatshapp, playstore, mail;
+    CardView kundali, aarti, puja_list, booking, matching, whatshapp, playstore, mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +48,7 @@ public class HomePageVer2Activity extends AppCompatActivity {
         whatshapp = findViewById(R.id.whatshapp);
         playstore = findViewById(R.id.cardView15);
         mail = findViewById(R.id.cardView18);
-
+        matching = findViewById(R.id.cardView12);
 
 
 
@@ -92,11 +91,6 @@ public class HomePageVer2Activity extends AppCompatActivity {
         });
 
 
-
-
-
-
-
 //playstore
         playstore.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,11 +123,24 @@ public class HomePageVer2Activity extends AppCompatActivity {
         booking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Create an Intent to start the Kundali_entry activity
-                Intent intent = new Intent(HomePageVer2Activity.this, booking.class);
-                startActivity(intent); // Use startActivity() for a single activity
-// for animation
-                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                // Show a toast message
+                Toast.makeText(HomePageVer2Activity.this, "Soon .....", Toast.LENGTH_SHORT).show();
+
+                // Trigger vibration
+                triggerVibration();
+            }
+        });
+
+
+
+// Booking OnClickListener
+        matching.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Show a toast message
+                Toast.makeText(HomePageVer2Activity.this, "Soon .....", Toast.LENGTH_SHORT).show();
+
+                // Trigger vibration
                 triggerVibration();
             }
         });
