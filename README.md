@@ -1,4 +1,4 @@
-# Ganpati 
+# Ganpati
 ## How to Use the Ganpati Android Project
 
 1. **Clone the Repository:**
