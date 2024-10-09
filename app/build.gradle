@@ -13,7 +13,6 @@ android {
         targetSdk 34
         versionCode 14
         versionName "1.6.2"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -38,14 +37,14 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:23.0.0'
     implementation 'com.google.firebase:firebase-database-ktx:21.0.0'
     implementation 'com.google.firebase:firebase-perf-ktx:21.0.1'
-    implementation 'com.google.firebase:firebase-storage-ktx:21.0.0'
-    implementation 'com.google.firebase:firebase-storage:21.0.0'
+    implementation 'com.google.firebase:firebase-storage-ktx:21.0.1'
+    implementation 'com.google.firebase:firebase-storage:21.0.1'
     implementation 'androidx.activity:activity:1.9.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     implementation 'com.mig35:carousellayoutmanager:1.4.6'
-    implementation platform('com.google.firebase:firebase-bom:33.2.0')
+    implementation platform('com.google.firebase:firebase-bom:33.4.0')
     implementation 'com.google.android.gms:play-services-auth:21.2.0'
     implementation "com.airbnb.android:lottie:6.1.0"
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
