@@ -60,6 +60,7 @@ public class Aarti_list extends AppCompatActivity {
         });
     }
 
+
     // Initialize RecyclerView for displaying the list of Aartis
     public void initRecyclerView() {
         aartiRecyclerView = findViewById(R.id.aartiRecyclerView);
