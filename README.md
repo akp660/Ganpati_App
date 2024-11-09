@@ -6,7 +6,6 @@
     git clone https://github.com/akp660/Ganpati_App.git
     cd Ganpati
     ```
-   
 2. **Open in Android Studio:**
     1. Launch Android Studio.
     2. Select `Open an existing project`.
