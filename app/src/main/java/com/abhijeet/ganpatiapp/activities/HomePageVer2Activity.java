@@ -21,7 +21,7 @@ import com.abhijeet.ganpatiapp.R;
 
 public class HomePageVer2Activity extends AppCompatActivity {
 
-    LinearLayout layout, detailsText, app_info, app_infp_detail;
+    LinearLayout layout, detailsText;
     CardView kundali, aarti, puja_list, booking, matching, whatshapp, playstore, mail;
 
     @Override
@@ -41,68 +41,13 @@ public class HomePageVer2Activity extends AppCompatActivity {
         layout = findViewById(R.id.layout);
         kundali = findViewById(R.id.cardView11);
         aarti = findViewById(R.id.aarti);
-        app_info = findViewById(R.id.layout_1);
-        app_infp_detail = findViewById(R.id.detail_1);
         puja_list = findViewById(R.id.cardView2);
         booking = findViewById(R.id.cardView13);
         whatshapp = findViewById(R.id.whatshapp);
-        playstore = findViewById(R.id.cardView15);
-        mail = findViewById(R.id.cardView18);
         matching = findViewById(R.id.cardView12);
 
 
 
-
-
-
-
-
-// Mail OnClickListener
-        mail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                triggerVibration();
-                openEmailClient();
-            }
-            // Define the openEmailClient method outside of the onClick method
-            private void openEmailClient() {
-                // Create the intent to open the email client
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                emailIntent.setType("message/rfc822"); // Set MIME type to target email clients
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"abhijeetpandeydhn@gmail.com"}); // Replace with the desired email address
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Inquiry from Ganpati App User"); // Set the email subject
-                emailIntent.putExtra(Intent.EXTRA_TEXT,
-                        "Hey,\n\n" +
-                                "I am a Ganpati App user, and I wanted to get in touch regarding \n\n" +
-                                "[your query or concern]. \n\n " +
-                                "Thank you!\n\n" +
-                                "Best regards,\n" +
-                                "[Your Name]"); // Set the email body text
-
-                // Try to open an email app, and handle the case where no app is found
-                try {
-                    startActivity(Intent.createChooser(emailIntent, "Choose an email client"));
-                } catch (android.content.ActivityNotFoundException ex) {
-                    // Handle the case when no email app is available
-                    Toast.makeText(HomePageVer2Activity.this, "No email app found", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-        });
-
-
-//playstore
-        playstore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotourl("https://play.google.com/store/apps/details?id=com.abhijeet.ganpatiapp");
-                triggerVibration();
-            }
-            public void gotourl(String s){
-                Uri uri = Uri.parse(s);
-                startActivity(new Intent(Intent.ACTION_VIEW, uri));
-            }
-        });
 
 
 //whatshapp
@@ -189,17 +134,7 @@ public class HomePageVer2Activity extends AppCompatActivity {
         });
 
 
-// Set OnClickListener for the app_info to trigger the expansion
-        app_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                triggerVibration();
-                expandAppInfo(view); // Toggle app_infp_detail visibility on click
-            }
-        });
-
     }
-
 
     public void expand(View view) {
         // Toggle the visibility of detailsText
@@ -211,19 +146,6 @@ public class HomePageVer2Activity extends AppCompatActivity {
         // Apply the transition and change the visibility
         TransitionManager.beginDelayedTransition(layout, transition);
         detailsText.setVisibility(visibility);
-        triggerVibration();
-    }
-
-    public void expandAppInfo(View view) {
-        // Toggle the visibility of app_infp_detail
-        int visibility = (app_infp_detail.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-
-        AutoTransition transition = new AutoTransition();
-        transition.setDuration(200); // Set the transition duration
-
-        // Apply the transition and change the visibility
-        TransitionManager.beginDelayedTransition(app_info, transition);
-        app_infp_detail.setVisibility(visibility);
         triggerVibration();
     }
 
