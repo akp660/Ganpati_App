@@ -22,7 +22,7 @@ import com.abhijeet.ganpatiapp.R;
 public class HomePageVer2Activity extends AppCompatActivity {
 
     LinearLayout layout, detailsText;
-    CardView kundali, aarti, puja_list, booking, matching, whatshapp, playstore, mail;
+    CardView kundali, aarti, puja_list, booking, matching, whatshapp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
