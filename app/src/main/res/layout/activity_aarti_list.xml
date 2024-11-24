@@ -22,7 +22,7 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/tillana_medium"
         android:text="आरती संग्रह"
         android:textAlignment="center"

@@ -10,9 +10,14 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.abhijeet.ganpatiapp.R;
@@ -40,7 +45,17 @@ public class puja_list_view extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.puja_list_view);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.puja_view_recycler_view), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+
+
         sendBtn = findViewById(R.id.order);
         list = new ArrayList<>();
         title = findViewById(R.id.textView29);
